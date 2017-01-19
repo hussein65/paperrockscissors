@@ -1,0 +1,50 @@
+<!DOCTYPEhtml>
+<html>
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            p {
+                text-align: center;
+                color : blue;
+                font-style: italic;
+                font-size: 30px;
+                margin-top: 250px;
+            }
+            img {
+                margin-top: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4">
+                     <button class= "btn btn-primary" onclick="play('rock')">Rock</button>
+                </div>
+                <div class="col-lg-4">
+                    <button class= "btn btn-primary" onclick="play('paper')">Paper</button>
+                </div>
+                <div class="col-lg-4">
+                    <button class= "btn btn-primary" onclick="play('scissors')">Scissors</button>
+                </div>
+                <p id="demo"></p>
+            </div>
+        </div>
+
+            <script>
+        function play(playerChoice) {
+        
+            var computer = 'rock';
+            
+            if (computer==playerChoice) {
+                 document.getElementById("demo").innerHTML = "its a tie";   
+            } else if (playerChoice=="paper") {
+                   document.getElementById("demo").innerHTML ="<img id='img'' src='jswork/Images/winning.gif'>";
+            } else 
+                document.getElementById("demo").innerHTML ="<img id='img' src='jswork/Images/losing.gif'>";
+        }; 
+        </script>  
+        
+    </body>
+</html>
